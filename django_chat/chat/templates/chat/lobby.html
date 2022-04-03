@@ -9,4 +9,16 @@
 </head>
 <body>
   <h1>Chat</h1>
+
+  <script type = "text/javascrip">
+    let utl = `ws://${window.location.host}/ws/socket-server/`
+
+    const cahtSocket = new WebSocket(url)
+    
+    chatSocket.onmessage = function(e){
+	let data = JSON.parse(e.data)
+	console.log("Data:", data)
+    }
+    
+  </script>
 </body>
